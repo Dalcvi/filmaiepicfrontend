@@ -1,0 +1,19 @@
+.general {
+    margin-top: 50px;
+}
+
+.grid {
+    display: gird;
+    grid-auto-columns: 100%;
+}
+
+.centeredButton {
+    display: flex;
+    justify-content: flex-end;
+}
+.spinnerCentered {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
