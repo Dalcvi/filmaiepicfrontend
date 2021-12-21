@@ -7,6 +7,7 @@ import PostsPage from '../posts-page/posts-page';
 import PostPage from '../post-page/post-page';
 import ProfilePage from '../profile-page/profile-page';
 import { RegisterPage } from '../register-page';
+import PostCreation from '../post-creation/post-creation';
 
 export function App() {
   return (
@@ -17,6 +18,8 @@ export function App() {
         <Route path="register" element={<RegisterPage />} />
         <Route path="/posts" element={<PostsPage />} />
         <Route path="/posts/:postId" element={<PostPage />} />
+        <Route path="/posts/creation" element={<PostCreation />} />
+        <Route path="/posts/edit/:postId" element={<PostCreation />} />
         <Route path="/" element={<MoviesPage />} />
         <Route path="/profile" element={<ProfilePage />} />
       </Routes>
