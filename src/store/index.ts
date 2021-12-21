@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import moviesReducer from './movies/movies.reducer';
+import postsReducer from './posts/posts.reducer';
 import userReducer from './user/user.reducer';
 
 export const store = configureStore({
   reducer: {
     movies: moviesReducer,
     user: userReducer,
+    posts: postsReducer,
   },
 });
 

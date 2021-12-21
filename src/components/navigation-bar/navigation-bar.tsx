@@ -20,6 +20,7 @@ export function NavigationBar() {
         <Navbar.Brand onClick={() => navigate('/')}>Navbar</Navbar.Brand>
         <Nav className="ms-auto">
           <Nav.Link onClick={() => navigate('/')}>Home</Nav.Link>
+          <Nav.Link onClick={() => navigate('posts')}>Posts</Nav.Link>
           {user && (
             <Nav.Link onClick={() => navigate('profile')}>Profile</Nav.Link>
           )}
