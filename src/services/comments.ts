@@ -13,7 +13,7 @@ export const postComment = async (
   name: string,
 ) => {
   await axios.post(
-    `https://localhost:5001/FilmaiOut/Posts/post/${postId}/comment`,
+    `http://localhost:5001/FilmaiOut/Posts/post/${postId}/comment`,
     {
       text,
       name,
@@ -23,7 +23,7 @@ export const postComment = async (
 
 export const getComments = async (postId: number) => {
   return await axios
-    .get(`https://localhost:5001/FilmaiOut/Posts/post/${postId}/comment`)
+    .get(`http://localhost:5001/FilmaiOut/Posts/post/${postId}/comment`)
     .then(response => {
       console.log('COMMENTS', response);
       return response.data as Comment[];
@@ -32,6 +32,6 @@ export const getComments = async (postId: number) => {
 
 export const deleteComment = async (commentId: number, postId: number) => {
   await axios.delete(
-    `https://localhost:5001/FilmaiOut/Posts/post/${postId}/comment/${commentId}`,
+    `http://localhost:5001/FilmaiOut/Posts/post/${postId}/comment/${commentId}`,
   );
 };

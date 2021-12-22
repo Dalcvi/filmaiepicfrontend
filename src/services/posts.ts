@@ -16,7 +16,7 @@ export interface Post {
 }
 
 export const getPosts = async (dispatch: AppDispatch) => {
-  const posts = await axios.get('https://localhost:5001/FilmaiOut/Posts');
+  const posts = await axios.get('http://localhost:5001/FilmaiOut/Posts');
   dispatch(addPosts(posts.data as Post[]));
 };
 
@@ -25,7 +25,7 @@ export const createPost = async (
   name: string,
   userName: string,
 ) => {
-  await axios.post('https://localhost:5001/FilmaiOut/Posts/post', {
+  await axios.post('http://localhost:5001/FilmaiOut/Posts/post', {
     text,
     name,
     userName,
@@ -37,7 +37,7 @@ export const updatePost = async (
   title: string,
   postId: Number,
 ) => {
-  await axios.put('https://localhost:5001/FilmaiOut/Posts/post', {
+  await axios.put('http://localhost:5001/FilmaiOut/Posts/post', {
     text,
     title,
     postId,
@@ -45,5 +45,5 @@ export const updatePost = async (
 };
 
 export const deletePost = async (postId: number) => {
-  await axios.delete('https://localhost:5001/FilmaiOut/Posts/post/' + postId);
+  await axios.delete('http://localhost:5001/FilmaiOut/Posts/post/' + postId);
 };

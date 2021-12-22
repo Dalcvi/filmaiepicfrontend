@@ -17,7 +17,7 @@ export interface User {
 
 export const login = async (email: string, password: string) => {
   return await axios
-    .post('https://localhost:5001/FilmaiOut/Auth/login', {
+    .post('http://localhost:5001/FilmaiOut/Auth/login', {
       Email: email,
       PasswordHash: password,
     })
@@ -36,7 +36,7 @@ export const register = async (
   age: number,
 ) => {
   return await axios
-    .post('https://localhost:5001/FilmaiOut/Auth/register', {
+    .post('http://localhost:5001/FilmaiOut/Auth/register', {
       email,
       passwordHash: password,
       name,
@@ -52,5 +52,5 @@ export const register = async (
 
 export const deleteAccount = async (name: string) => {
   console.log('HELLO');
-  await axios.delete('https://localhost:5001/FilmaiOut/Auth?name=' + name);
+  await axios.delete('http://localhost:5001/FilmaiOut/Auth?name=' + name);
 };

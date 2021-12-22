@@ -8,6 +8,8 @@ import PostPage from '../post-page/post-page';
 import ProfilePage from '../profile-page/profile-page';
 import { RegisterPage } from '../register-page';
 import PostCreation from '../post-creation/post-creation';
+import MovieListsPage from '../movie-lists/movie-lists-page';
+import MovieListPage from '../movie-list/movie-list-page';
 
 export function App() {
   return (
@@ -22,6 +24,8 @@ export function App() {
         <Route path="/posts/edit/:postId" element={<PostCreation />} />
         <Route path="/" element={<MoviesPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/movielists" element={<MovieListsPage />} />
+        <Route path="/movielists/:movieListId" element={<MovieListPage />} />
       </Routes>
     </Router>
   );
